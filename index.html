@@ -172,10 +172,63 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>内容</p>
+        <h1 id="一、基于hexo框架的个人博客（静态）"><a href="#一、基于hexo框架的个人博客（静态）" class="headerlink" title="一、基于hexo框架的个人博客（静态）"></a>一、基于hexo框架的个人博客（静态）</h1><h2 id="安装步骤："><a href="#安装步骤：" class="headerlink" title="安装步骤："></a>安装步骤：</h2><h4 id="1-下载并安装node-js"><a href="#1-下载并安装node-js" class="headerlink" title="1.下载并安装node.js"></a>1.下载并安装node.js</h4><blockquote>
+<p><a href="https://nodejs.org" target="_blank" rel="noopener">https://nodejs.org</a></p>
+</blockquote>
+<p><img src="C:%5CUsers%5CFQK%5Cblog%5Csource_posts%5Cimages%5CQQ%E6%88%AA%E5%9B%BE20200506175849.png" alt=""></p>
+<p>命令行输入node -v，出现版本号即安装成功。</p>
+<h4 id="2-通过node-js默认的包管理工具npm下载hexo框架，由于npm下载慢，所以先通过npm下载cnpm。"><a href="#2-通过node-js默认的包管理工具npm下载hexo框架，由于npm下载慢，所以先通过npm下载cnpm。" class="headerlink" title="2.通过node.js默认的包管理工具npm下载hexo框架，由于npm下载慢，所以先通过npm下载cnpm。"></a>2.通过node.js默认的包管理工具npm下载hexo框架，由于npm下载慢，所以先通过npm下载cnpm。</h4><p><img src="C:%5CUsers%5CFQK%5Cblog%5Csource_posts%5Cimages%5CQQ%E6%88%AA%E5%9B%BE20200506180903.png" alt=""></p>
+<h4 id="3-选择一个路径建立一个空的文件夹，存放blog"><a href="#3-选择一个路径建立一个空的文件夹，存放blog" class="headerlink" title="3.选择一个路径建立一个空的文件夹，存放blog"></a>3.选择一个路径建立一个空的文件夹，存放blog</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir blog</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-使用hexo生成博客"><a href="#4-使用hexo生成博客" class="headerlink" title="4.使用hexo生成博客"></a>4.使用hexo生成博客</h4><p>hexo init 初始化一个博客</p>
+<p><img src="C:%5CUsers%5CFQK%5Cblog%5Csource_posts%5Cimages%5CQQ%E6%88%AA%E5%9B%BE20200506181750.png" alt=""></p>
+<h4 id="5-启动hexo"><a href="#5-启动hexo" class="headerlink" title="5.启动hexo"></a>5.启动hexo</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+
+<p>默认在4000端口启动</p>
+<p><img src="C:%5CUsers%5CFQK%5Cblog%5Csource_posts%5Cimages%5CQQ%E6%88%AA%E5%9B%BE20200506182102.png" alt=""></p>
+<h4 id="6-通过浏览器访问"><a href="#6-通过浏览器访问" class="headerlink" title="6.通过浏览器访问"></a>6.通过浏览器访问</h4><p><img src="C:%5CUsers%5CFQK%5Cblog%5Csource_posts%5Cimages%5CQQ%E6%88%AA%E5%9B%BE20200506182326.png" alt=""></p>
+<h4 id="7-新建博客"><a href="#7-新建博客" class="headerlink" title="7.新建博客"></a>7.新建博客</h4><p>默认使用markdown格式</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo n <span class="string">"我的第一篇博客"</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="C:%5CUsers%5CFQK%5Cblog%5Csource_posts%5Cimages%5CQQ%E6%88%AA%E5%9B%BE20200506182849.png" alt=""></p>
+<h4 id="8-退回到blog目录，清理、生成hexo-再次启动，博客就更新完成"><a href="#8-退回到blog目录，清理、生成hexo-再次启动，博客就更新完成" class="headerlink" title="8.退回到blog目录，清理、生成hexo,再次启动，博客就更新完成"></a>8.退回到blog目录，清理、生成hexo,再次启动，博客就更新完成</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd ../..    <span class="comment">//退两级目录</span></span><br><span class="line">hexo clean  <span class="comment">//清理</span></span><br><span class="line">hexo g      <span class="comment">//生成    </span></span><br><span class="line">hexo s      <span class="comment">//hexo启动</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="9-部署远端（免费github）"><a href="#9-部署远端（免费github）" class="headerlink" title="9.部署远端（免费github）"></a>9.部署远端（免费github）</h4><p>先登陆github，创建一个空仓库</p>
+<p>然后在linux中修改 -config.yml文件</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim _configyml</span><br></pre></td></tr></table></figure>
+
+<p>修改内容如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:<span class="comment">//github.com/Fqikang/Fqikang1.github.io.git</span></span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p><img src="C:%5CUsers%5CFQK%5Cblog%5Csource_posts%5Cimages%5CQQ%E6%88%AA%E5%9B%BE20200506184051.png" alt=""></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d  <span class="comment">//部署到远端</span></span><br></pre></td></tr></table></figure>
+
+<p>==注意：win10要先安装一个git，并先配置git bash。==</p>
 <hr>
-<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>内容</p>
-<hr>
+<h1 id="二、在linux（虚拟机）下命令行安装软件"><a href="#二、在linux（虚拟机）下命令行安装软件" class="headerlink" title="二、在linux（虚拟机）下命令行安装软件"></a>二、在linux（虚拟机）下命令行安装软件</h1><h3 id="1-安装node-js"><a href="#1-安装node-js" class="headerlink" title="1.安装node.js"></a>1.安装node.js</h3><ol>
+<li><p>在Windows本机上下载安装文件 node-v14.1.0-linux-x64.tar.xz</p>
+<p><img src="C:%5CUsers%5CFQK%5Cblog%5Csource_posts%5Cimages%5C1.png" alt=""></p>
+<p>2.用Xftp将源码包上传到linux的/opt/soft，在命令行输入：tar -xvf  node-v14.1.0-linux-x64.tar.xz进行解压。</p>
+</li>
+</ol>
+<p>​        3.编辑文件  vi /etc/profile文件末添加如下,(配置node的环境变量)</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export NODE_HOME=/opt/soft/node-v0.10.32-linux-x64</span><br><span class="line">export PATH=$PATH:$NODE_HOME/bin</span><br><span class="line">export NODE_PATH=$NODE_HOME/lib/node_modules</span><br></pre></td></tr></table></figure>
+
+<p>​        4.在命令行输入：source /etc/profile，让配置文件生效。</p>
+<p>5.在命令行输入：node -v，查看node.js的版本。如果出现版本号则证明安装成功。如下图所示。</p>
+<p><img src="C:%5CUsers%5CFQK%5Cblog%5Csource_posts%5Cimages%5CQQ%E6%88%AA%E5%9B%BE20200506174433.png" alt=""></p>
+<h3 id="2-npm与cnpm的区别"><a href="#2-npm与cnpm的区别" class="headerlink" title="2.npm与cnpm的区别"></a>2.npm与cnpm的区别</h3><p>npm:是 JavaScript 世界的包管理工具，并且是 Node.js 平台的默认包管理工具。通过 npm 可以安装、共享、分发代码，管理项目依赖关系。</p>
+<p>cnpm:</p>
+<blockquote>
+<p>淘宝团队做的国内镜像，因为npm的服务器位于国外可能会影响安装。淘宝镜像与官方同步频率目前为 10分钟 一次以保证尽量与官方服务同步。</p>
+<p>安装：命令提示符执行<br> <code>npm install cnpm -g --registry=https://registry.npm.taobao.org</code></p>
+<p><code>cnpm -v</code> 来测试是否成功安装</p>
+<p><code>-g</code>：全局安装。 将会安装在C：\ Users \ Administrator \ AppData \ Roaming \ npm，<strong>并且写入系统环境变量</strong>；非全局安装：将会安装在当前定位目录;全局安装可以通过命令行任何地方调用它，本地安装将安装在定位目录的node_modules文件夹下，通过要求调用;</p>
+<p>参考链接：<a href="https://www.jianshu.com/p/115594f64b41" target="_blank" rel="noopener">https://www.jianshu.com/p/115594f64b41</a></p>
+</blockquote>
+<h3 id="3-hexo目录下文件夹的作用："><a href="#3-hexo目录下文件夹的作用：" class="headerlink" title="3.hexo目录下文件夹的作用："></a>3.hexo目录下文件夹的作用：</h3><p>待完成。</p>
 
       
 
