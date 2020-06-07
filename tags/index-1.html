@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -93,6 +93,19 @@
 
 <meta name="generator" content="Hexo 4.2.0"></head>
 <body>
+	<canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+	<script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+	<script type="text/javascript" src="/js/fireworks.js"></script>
+
+	<!--单击显示文字-->
+	<script type="text/javascript" src="/js/click_show_text.js"></script>
+
+	<!--动态线条背景-->
+	<script type="text/javascript"
+	color="255,0,0" opacity='1' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+	</script>
+
+	
   <div id="container">
     <div class="left-col">
     <div class="overlay"></div>
@@ -129,11 +142,6 @@
                             <div class="ribbon"></div>
                         </div>
                         
-                        <div class="icon-wrap icon-link hide" data-idx="2">
-                            <div class="loopback_l"></div>
-                            <div class="loopback_r"></div>
-                        </div>
-                        
                         
                         <div class="icon-wrap icon-me hide" data-idx="3">
                             <div class="user"></div>
@@ -148,8 +156,6 @@
                     <ul class="tips-inner">
                         <li>Menu</li>
                         <li>Tags</li>
-                        
-                        <li>Friends</li>
                         
                         
                         <li>About Me</li>
@@ -197,22 +203,10 @@
                 
                 
                 
-                <section class="switch-part switch-part3">
-                    <div id="js-friends">
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/" target="_blank" rel="noopener">GitHub</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/" target="_blank" rel="noopener">MOxFIVE</a>
-                    
-                    </div>
-                </section>
-                
 
                 
                 
-                <section class="switch-part switch-part4">
+                <section class="switch-part switch-part3">
                 
                     <div id="js-aboutme">专注于后端</div>
                 </section>
@@ -221,6 +215,13 @@
         </div>
     </header>                
 </div>
+
+<div>
+	<center>
+		<script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=5ghej37xq21&amp;m=7&amp;c=e63100&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;bv=90&amp;lx=-420&amp;ly=420&amp;hi=20&amp;he=7&amp;hc=a8ddff&amp;rs=80" async="async"></script>
+	</center>
+</div>
+
     </div>
     <div class="mid-col">
       <nav id="mobile-nav">
@@ -289,6 +290,27 @@
     </h1>
   
 
+		
+			<div style="margin-top:10px 0;margin-bottom:30px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+        <span class="post-meta-item-text">  字数统计: </span>
+        <span class="post-count">0字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp; | &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+        <span class="post-meta-item-text">  阅读时长: </span>
+        <span class="post-count">1分</span>
+      </span>
+    </span>
+</div>
+
+				
       </header>
       
       <div class="article-info article-info-post">
@@ -363,7 +385,9 @@
 
 
     	  
-		   <div id="comment"></div>
+		   
+<div id="comment"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
 <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 <script>
 new Valine({
@@ -377,16 +401,8 @@ new Valine({
     avatar:'mm' 
 });
 </script>
-		  
     
 
-
-
-
-
-    <script>
-        
-    </script>
 
 
 
@@ -427,6 +443,38 @@ new Valine({
             </div>
         
     </div>
+	
+	<div>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+本站总访问量 <span id="busuanzi_value_site_pv"></span> 次&nbsp&nbsp&nbsp
+本站访客数<span id="busuanzi_value_site_uv"></span>人次
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("05/6/2020 01:49:00");//此处修改你的建站时间或者网站上线时间 
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+setInterval("createtime()",250);
+</script>
+<i class="fas fa-chart-area"></i>
+<span class="post-count">字数统计：1.7k</span>
+
+</div>
+	
+	
+	
+	
+	
 </footer>
     </div>
     
@@ -441,7 +489,7 @@ new Valine({
                 $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
             }
             else {
-                var backgroundnum = 5;
+                var backgroundnum = 1;
                 var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
                 $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
             }
@@ -498,6 +546,15 @@ new Valine({
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
-  </div>
+	</div>
 </body>
-</html>
+</html>	
+
+
+
+
+
+
+
+	
+  
